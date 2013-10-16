@@ -13,7 +13,7 @@
 # The things that can be set here are documented in mk/os161.config.mk.
 #
 
-OSTREE=/home/wadlev14/os161/root
+OSTREE=/home/wadlev14/OS161/root
 PLATFORM=sys161
 MACHINE=mips
 COMPAT_CFLAGS=
