@@ -1,0 +1,8 @@
+cd $HOME/OS161
+./configure --ostree=$HOME/OS161/root --toolprefix=sos-
+cd kern/conf
+./config ASST0
+cd ../compile/ASST0
+pmake depend 
+pmake 
+pmake install

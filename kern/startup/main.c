@@ -50,7 +50,7 @@
 #include <test.h>
 #include <version.h>
 #include "autoconf.h"  // for pseudoconfig
-
+#include  "opt-A0.h"  // for asignment 0
 
 /*
  * These two pieces of data are maintained by the makefiles and build system.
@@ -101,11 +101,12 @@ boot(void)
 	kprintf("%s", harvard_copyright);
 	kprintf("\n");
 
-	kprintf("Lee no akai-kami no kaizoku %s (%s #%d)\n", 
+	kprintf("Levi Wadley %s (%s #%d)\n", 
 		GROUP_VERSION, buildconfig, buildversion);
 	kprintf("\n");
+	
 
-	/* Early initialization. */
+/* Early initialization. */
 	ram_bootstrap();
 	proc_bootstrap();
 	thread_bootstrap();
@@ -206,8 +207,12 @@ void
 kmain(char *arguments)
 {
 	boot();
-
+#if OPT_A0
+	hello();
+#endif /* OPT_A0 */
 	menu(arguments);
 
+
 	/* Should not get here */
+       /*Rockstar told me that once, and I proved them wrong */
 }
